@@ -1,0 +1,10 @@
+# one green sphere ambient and diffuse
+
+fov 60
+arealight 7.5527864 -0.99999994 0.8944272 8.447213 0.0 -0.8944272 8.0 0.99999994 0.0 1 1 1
+
+
+surface   0 0.5 0   0 0 0   0 0 0   1  0 0 0
+sphere  1 0 0 -4
+
+write i2.png

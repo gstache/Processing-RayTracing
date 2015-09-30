@@ -1,0 +1,40 @@
+# three spheres ambient and diffuse, includes shadow
+
+fov 60
+# blue background
+
+background 0.2 0.2 1
+
+# three light sources (red, green, blue)
+
+arealight 2.801653 3.4049587 0.89256203 3.5454545 4.0 -0.54545456 2.6528926 4.5950413 -0.34710744 0.8 0.2 0.2
+
+arealight -3.892562 3.4049587 -0.19834712 -2.4545455 4.0 0.54545456 -2.6528926 4.5950413 -0.34710744 0.2 0.8 0.2
+
+arealight 0.49613893 3.7538462 -5.4307694 -0.49613893 4.0 -5.0 0.0 4.246154 -4.5692306 0.2 0.2 0.8
+
+
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8  .2 .2 .2  0 0 0  1  0 0 0
+
+begin
+vertex -100 -1 -100
+vertex  100 -1 -100
+vertex  100 -1  100
+end
+
+begin
+vertex  100 -1  100
+vertex -100 -1  100
+vertex -100 -1 -100
+end
+
+# shadow-casting sphere
+
+surface  .8 .8 .8  .2 .2 .2  0 0 0  1  0 0 0
+sphere  1  0 0.5 -3
+
+
+write i6.png

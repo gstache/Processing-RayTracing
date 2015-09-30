@@ -1,0 +1,49 @@
+# several reflective spheres
+
+fov 60
+
+# blue background
+
+background 0.2 0.2 1
+
+# two light sources
+
+arealight 7.084529 7.03965 2.5995748 8.8038645 8.0 3.5604928 8.111607 8.96035 2.8399324 .7 .7 .7
+
+arealight -4.709375 1.0035801 -0.7048222 -3.3351774 2.0 0.7446012 -3.9554474 2.99642 -0.039779007 .3 .3 .3
+
+# these two triangles acts as a ground plane
+
+surface  .8 .8 .8  .2 .2 .2  0 0 0  1  0 0 0 
+
+begin
+vertex -100 -1 -100
+vertex  100 -1 -100
+vertex  100 -1  100
+end
+
+begin
+vertex  100 -1  100
+vertex -100 -1  100
+vertex -100 -1 -100
+end
+
+# reflective spheres
+
+surface  .6 .6 .6  .2 .2 .2  0.7 0.7 0.7  20  0.7 0 0
+sphere 0.8  0.8 0.6 -7
+
+surface  .6 .6 .6  .2 .2 .2  0.7 0.7 0.7  20  0.7 0 0
+sphere 0.8  -0.8 0.6 -7
+
+surface  .6 .6 .6  .2 .2 .2  0.7 0.7 0.7  20  0.7 0 0
+sphere 0.4  0 0 -5.5
+
+surface  .6 .6 .6  .2 .2 .2  0.7 0.7 0.7  20  0.7 0 0
+sphere 0.4  1 -0.2 -4
+
+surface  .6 .6 .6  .2 .2 .2  0.7 0.7 0.7  20  0.7 0 0
+sphere 0.4  -1 -0.2 -4
+
+write i9.png
+

@@ -1,0 +1,16 @@
+# three spheres ambient and diffuse, includes shadow
+
+fov 60
+arealight 4.35017 4.166667 5.741582 5.8164964 5.0 4.5917516 4.8333335 5.833333 4.6666665 1 1 1
+
+
+surface   0 0.5 0  0 0.2 0   0 0 0   1  0 0 0
+sphere 1  0 0 -5
+
+surface   0.5 0 0   0.2 0 0   0 0 0   1  0 0 0
+sphere .33  1 0.6 -4
+
+surface   0.5 0.5 0   0.2 0.2 0   0 0 0   1  0 0 0
+sphere .11  1.4 0.9 -3.3
+
+write i3.png
